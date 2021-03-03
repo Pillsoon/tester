@@ -6,12 +6,12 @@ const runTester = async (callback) => {
   const result = [];
   const products = await productService.getProducts();
 
-  await Promise.all(products.map(async (product) => {
+  for (const product of products) {
     const sizeData = await apiService.extractSizeData(product.imageUrl);
     const score = groundTruthService.calculateScore(product.code, sizeData);
 
     result.push({code: product.code, score: score});
-  }));
+  }
 
   callback(result);
 }
