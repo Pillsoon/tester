@@ -1,0 +1,19 @@
+{
+  "name": "size_table_tester",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "^2.6.9",
+    "express": "~4.16.1",
+    "express-pino-logger": "^5.0.0",
+    "jade": "~1.11.0",
+    "pino": "^6.8.0",
+    "redis": "^3.0.2"
+  }
+}
